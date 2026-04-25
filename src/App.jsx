@@ -1,16 +1,41 @@
 import { useState } from 'react'
 import { LanguageProvider, useLang } from './context/LanguageContext'
+import { MenuProvider, useMenu } from './context/MenuContext'
 import Header from './components/Header'
 import CategoryNav from './components/CategoryNav'
 import CategoryDescription from './components/CategoryDescription'
 import ProductGrid from './components/ProductGrid'
-import { categories } from './data/menu'
 import './App.css'
 
 function MenuApp() {
-  const [activeCategoryId, setActiveCategoryId] = useState(categories[0].id)
   const { lang } = useLang()
-  const activeCategory = categories.find(c => c.id === activeCategoryId)
+  const { categories, loading, error } = useMenu()
+  const [activeCategoryId, setActiveCategoryId] = useState(null)
+
+  const activeId = activeCategoryId ?? categories[0]?.id ?? null
+  const activeCategory = categories.find(c => c.id === activeId) ?? null
+
+  if (loading) {
+    return (
+      <div className="layout">
+        <Header />
+        <div className="loading">
+          <div className="loading__spinner" />
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="layout">
+        <Header />
+        <div className="loading">
+          <p className="loading__error">Failed to load menu: {error}</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="layout">
@@ -18,11 +43,11 @@ function MenuApp() {
       <main className="main">
         <h1 className="hero-title">menu</h1>
         <div className="nav-sticky">
-          <CategoryNav active={activeCategoryId} onChange={setActiveCategoryId} />
+          <CategoryNav active={activeId} onChange={setActiveCategoryId} />
         </div>
         <div className="content">
           <CategoryDescription category={activeCategory} />
-          <ProductGrid category={activeCategoryId} />
+          {activeId && <ProductGrid category={activeId} />}
         </div>
       </main>
     </div>
@@ -32,7 +57,9 @@ function MenuApp() {
 export default function App() {
   return (
     <LanguageProvider>
-      <MenuApp />
+      <MenuProvider>
+        <MenuApp />
+      </MenuProvider>
     </LanguageProvider>
   )
 }

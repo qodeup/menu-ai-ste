@@ -3,14 +3,20 @@ import { useLang } from '../context/LanguageContext'
 import './AllergenModal.css'
 
 const ALLERGENS = {
-  gluten:    { it: 'Glutine',          en: 'Gluten',      icon: '🌾' },
-  dairy:     { it: 'Latticini',        en: 'Dairy',       icon: '🧀' },
-  eggs:      { it: 'Uova',            en: 'Eggs',        icon: '🥚' },
-  fish:      { it: 'Pesce',           en: 'Fish',        icon: '🐟' },
-  sulphites: { it: 'Solfiti',         en: 'Sulphites',   icon: '🍷' },
-  soy:       { it: 'Soia',            en: 'Soy',         icon: '🫘' },
-  nuts:      { it: 'Frutta a guscio', en: 'Tree nuts',   icon: '🥜' },
-  peanuts:   { it: 'Arachidi',        en: 'Peanuts',     icon: '🥜' },
+  gluten:      { it: 'Glutine',          en: 'Gluten',        icon: '🌾' },
+  dairy:       { it: 'Latticini',        en: 'Dairy',         icon: '🧀' },
+  eggs:        { it: 'Uova',             en: 'Eggs',          icon: '🥚' },
+  fish:        { it: 'Pesce',            en: 'Fish',          icon: '🐟' },
+  sulphites:   { it: 'Solfiti',          en: 'Sulphites',     icon: '🍷' },
+  soy:         { it: 'Soia',             en: 'Soy',           icon: '🫘' },
+  nuts:        { it: 'Frutta a guscio',  en: 'Tree nuts',     icon: '🌰' },
+  peanuts:     { it: 'Arachidi',         en: 'Peanuts',       icon: '🥜' },
+  celery:      { it: 'Sedano',           en: 'Celery',        icon: '🥬' },
+  crustaceans: { it: 'Crostacei',        en: 'Crustaceans',   icon: '🦞' },
+  lupin:       { it: 'Lupini',           en: 'Lupin',         icon: '🌿' },
+  molluscs:    { it: 'Molluschi',        en: 'Molluscs',      icon: '🦑' },
+  mustard:     { it: 'Senape',           en: 'Mustard',       icon: '🌱' },
+  sesame:      { it: 'Sesamo',           en: 'Sesame',        icon: '🌻' },
 }
 
 const LABELS = {

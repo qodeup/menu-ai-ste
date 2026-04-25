@@ -1,0 +1,250 @@
+{
+  "id": "542e8400-e29b-41d4-a716-446655440001",
+  "name": "Menu Primavera 2026",
+  "currency": "EUR",
+  "updatedAt": "2026-03-30T10:15:00.000Z",
+  "serviceCharge": {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "name": "Coperto",
+    "kind": "serviceCharge",
+    "price": { "amount": 200 },
+    "localizations": [
+      { "language": "en", "name": "Cover charge", "description": "Service charge applied per guest" },
+      { "language": "it", "name": "Coperto", "description": "Coperto applicato per ospite" }
+    ]
+  },
+  "categories": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "name": "Pizzeria",
+      "sortOrder": 1,
+      "localizations": [
+        { "language": "en", "name": "Pizzeria", "description": "Classic and special pizzas" },
+        { "language": "it", "name": "Pizzeria", "description": "Pizze classiche e speciali" }
+      ],
+      "sections": [
+        {
+          "id": "550e8400-e29b-41d4-a716-446655440003",
+          "name": "Pizze Classiche",
+          "type": "food",
+          "sortOrder": 1,
+          "localizations": [
+            { "language": "en", "name": "Classic Pizzas", "description": "Traditional pizza favorites" },
+            { "language": "it", "name": "Pizze Classiche", "description": "Le grandi tradizioni della pizza" }
+          ],
+          "products": [
+            {
+              "id": "550e8400-e29b-41d4-a716-446655440004",
+              "name": "Margherita",
+              "price": { "amount": 700 },
+              "orderable": true,
+              "hidden": false,
+              "storage": "refrigerated",
+              "sortOrder": 1,
+              "dietary": {
+                "allergens": ["gluten", "milk"],
+                "tags": ["vegetarian"]
+              },
+              "images": [
+                { "url": "https://cdn.example.com/menu/products/margherita-thumb.jpg", "kind": "thumb" }
+              ],
+              "localizations": [
+                { "language": "en", "name": "Margherita", "description": "Tomato sauce, mozzarella, basil and extra virgin olive oil" },
+                { "language": "it", "name": "Margherita", "description": "Pomodoro, fiordilatte, basilico e olio EVO" }
+              ]
+            },
+            {
+              "id": "550e8400-e29b-41d4-a716-446655440010",
+              "name": "Diavola",
+              "price": { "amount": 900 },
+              "orderable": true,
+              "hidden": false,
+              "storage": "refrigerated",
+              "sortOrder": 2,
+              "dietary": {
+                "allergens": ["gluten", "milk"],
+                "traces": ["soy"],
+                "tags": ["spicy"]
+              },
+              "images": [
+                { "url": "https://cdn.example.com/menu/products/diavola-thumb.jpg", "kind": "thumb" }
+              ],
+              "localizations": [
+                { "language": "en", "name": "Spicy Salami Pizza", "description": "Tomato sauce, mozzarella and spicy salami" },
+                { "language": "it", "name": "Diavola", "description": "Pomodoro, fiordilatte e salamino piccante" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "550e8400-e29b-41d4-a716-446655440013",
+          "name": "Pizze Speciali",
+          "type": "food",
+          "sortOrder": 2,
+          "localizations": [
+            { "language": "en", "name": "Special Pizzas", "description": "Creative combinations and premium ingredients" },
+            { "language": "it", "name": "Pizze Speciali", "description": "Abbinamenti creativi e ingredienti premium" }
+          ],
+          "products": [
+            {
+              "id": "550e8400-e29b-41d4-a716-446655440014",
+              "name": "Burrata e Crudo",
+              "price": { "amount": 1250 },
+              "orderable": true,
+              "hidden": false,
+              "storage": "refrigerated",
+              "sortOrder": 1,
+              "dietary": {
+                "allergens": ["gluten", "milk"],
+                "traces": ["nuts"],
+                "tags": []
+              },
+              "images": [
+                { "url": "https://cdn.example.com/menu/products/burrata-crudo-thumb.jpg", "kind": "thumb" }
+              ],
+              "localizations": [
+                { "language": "en", "name": "Burrata and Prosciutto", "description": "White base, burrata, prosciutto and rocket salad" },
+                { "language": "it", "name": "Burrata e Crudo", "description": "Base bianca, burrata, prosciutto crudo e rucola" }
+              ]
+            },
+            {
+              "id": "550e8400-e29b-41d4-a716-446655440018",
+              "name": "Vegetarian Deluxe",
+              "price": { "amount": 1050 },
+              "orderable": true,
+              "hidden": false,
+              "storage": "refrigerated",
+              "sortOrder": 2,
+              "dietary": {
+                "allergens": ["gluten", "milk"],
+                "tags": ["vegetarian"]
+              },
+              "images": [
+                { "url": "https://cdn.example.com/menu/products/vegetarian-deluxe-thumb.jpg", "kind": "thumb" }
+              ],
+              "localizations": [
+                { "language": "en", "name": "Vegetarian Deluxe", "description": "Tomato sauce, mozzarella, zucchini, eggplant, peppers and olives" },
+                { "language": "it", "name": "Vegetarian Deluxe", "description": "Pomodoro, fiordilatte, zucchine, melanzane, peperoni e olive" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440023",
+      "name": "Bar",
+      "sortOrder": 2,
+      "localizations": [
+        { "language": "en", "name": "Bar", "description": "Soft drinks, cocktails and chilled desserts" },
+        { "language": "it", "name": "Bar", "description": "Bibite, cocktail e dessert freddi" }
+      ],
+      "sections": [
+        {
+          "id": "550e8400-e29b-41d4-a716-446655440024",
+          "name": "Soft Drinks",
+          "type": "drinks",
+          "sortOrder": 1,
+          "localizations": [
+            { "language": "en", "name": "Soft Drinks", "description": "Non-alcoholic and refreshing drinks" },
+            { "language": "it", "name": "Soft Drinks", "description": "Analcolici e bevande fresche" }
+          ],
+          "products": [
+            {
+              "id": "550e8400-e29b-41d4-a716-446655440025",
+              "name": "Tè freddo limone",
+              "price": { "amount": 320 },
+              "orderable": true,
+              "hidden": false,
+              "storage": "refrigerated",
+              "sortOrder": 1,
+              "dietary": {
+                "tags": ["vegan", "gluten-free"]
+              },
+              "images": [
+                { "url": "https://cdn.example.com/menu/products/lemon-tea-thumb.jpg", "kind": "thumb" }
+              ],
+              "localizations": [
+                { "language": "en", "name": "Lemon iced tea", "description": "Bottled lemon iced tea" },
+                { "language": "it", "name": "Tè freddo limone", "description": "Tè freddo al limone in bottiglia" }
+              ]
+            },
+            {
+              "id": "550e8400-e29b-41d4-a716-446655440030",
+              "name": "Spremuta d'arancia",
+              "price": { "amount": 450 },
+              "orderable": true,
+              "hidden": false,
+              "storage": "refrigerated",
+              "sortOrder": 2,
+              "dietary": {
+                "tags": ["vegan", "gluten-free"]
+              },
+              "images": [
+                { "url": "https://cdn.example.com/menu/products/orange-juice-thumb.jpg", "kind": "thumb" }
+              ],
+              "localizations": [
+                { "language": "en", "name": "Fresh orange juice", "description": "Freshly squeezed orange juice" },
+                { "language": "it", "name": "Spremuta d'arancia", "description": "Spremuta fresca preparata al momento" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "550e8400-e29b-41d4-a716-446655440033",
+          "name": "Dessert Freddi",
+          "type": "food",
+          "sortOrder": 2,
+          "localizations": [
+            { "language": "en", "name": "Cold Desserts", "description": "Desserts and ice cream served chilled" },
+            { "language": "it", "name": "Dessert Freddi", "description": "Dolci e gelati serviti freddi" }
+          ],
+          "products": [
+            {
+              "id": "550e8400-e29b-41d4-a716-446655440034",
+              "name": "Tiramisù",
+              "price": { "amount": 550 },
+              "orderable": true,
+              "hidden": false,
+              "storage": "refrigerated",
+              "sortOrder": 1,
+              "dietary": {
+                "allergens": ["milk", "eggs", "gluten"],
+                "traces": ["nuts"],
+                "tags": ["vegetarian"]
+              },
+              "images": [
+                { "url": "https://cdn.example.com/menu/products/tiramisu-thumb.jpg", "kind": "thumb" }
+              ],
+              "localizations": [
+                { "language": "en", "name": "Tiramisu", "description": "Ladyfingers, mascarpone cream, coffee and cocoa" },
+                { "language": "it", "name": "Tiramisù", "description": "Savoiardi, crema al mascarpone, caffè e cacao" }
+              ]
+            },
+            {
+              "id": "550e8400-e29b-41d4-a716-446655440040",
+              "name": "Coppetta gelato",
+              "price": { "amount": 400 },
+              "orderable": true,
+              "hidden": false,
+              "storage": "frozen",
+              "sortOrder": 2,
+              "dietary": {
+                "allergens": ["milk"],
+                "traces": ["nuts", "peanuts", "soy"],
+                "tags": ["vegetarian"]
+              },
+              "images": [
+                { "url": "https://cdn.example.com/menu/products/gelato-cup-thumb.jpg", "kind": "thumb" }
+              ],
+              "localizations": [
+                { "language": "en", "name": "Ice cream cup", "description": "Cup with selectable flavors" },
+                { "language": "it", "name": "Coppetta gelato", "description": "Coppetta con gusti a scelta" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
