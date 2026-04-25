@@ -45,7 +45,7 @@ export const products = {
           name: { it: 'Margherita', en: 'Margherita' },
           description: { it: 'Pomodoro, fiordilatte, basilico e olio EVO', en: 'Tomato sauce, mozzarella, basil and extra virgin olive oil' },
           price: 7.00,
-          photo: 'https://cdn.example.com/menu/products/margherita-thumb.jpg',
+          photo: '/PIZZA-MARGHERITA.jpg',
           vegetarian: true, vegan: false, glutenFree: false, spicy: false, frozen: false,
           allergens: allergenMap(['gluten', 'milk']),
           traces: [],
