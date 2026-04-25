@@ -1,10 +1,11 @@
 import { useRef } from 'react'
 import { useLang } from '../context/LanguageContext'
-import { categories } from '../data/menu'
+import { useMenu } from '../context/MenuContext'
 import './CategoryNav.css'
 
 export default function CategoryNav({ active, onChange }) {
   const { lang } = useLang()
+  const { categories } = useMenu()
   const trackRef = useRef(null)
   const dragRef = useRef({ dragging: false, startX: 0, scrollLeft: 0 })
 

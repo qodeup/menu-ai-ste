@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useLang } from '../context/LanguageContext'
-import { products } from '../data/menu'
+import { useMenu } from '../context/MenuContext'
 import AllergenModal from './AllergenModal'
 import './ProductGrid.css'
 
@@ -69,6 +69,7 @@ function ProductRow({ item, onSelect, lang, isFirst }) {
 
 export default function ProductGrid({ category }) {
   const { lang } = useLang()
+  const { products } = useMenu()
   const [selected, setSelected] = useState(null)
   const [displayed, setDisplayed] = useState(category)
   const [phase, setPhase] = useState('idle')
