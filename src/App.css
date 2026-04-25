@@ -26,3 +26,9 @@
   z-index: 90;
   box-shadow: 0 3px 10px rgba(220, 7, 70, 0.25);
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

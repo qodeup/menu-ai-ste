@@ -38,11 +38,38 @@
   flex-shrink: 0;
 }
 
+.sheet__photo {
+  width: 100%;
+  height: 200px;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.sheet__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sheet__photo-placeholder {
+  width: 100%;
+  height: 180px;
+  flex-shrink: 0;
+  margin-top: 8px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #ccc;
+}
+
 .sheet__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem 0.875rem;
+  padding: 0.875rem 1.25rem;
   border-bottom: 1px solid #f0f0f0;
   flex-shrink: 0;
 }
@@ -63,58 +90,85 @@
   line-height: 1;
 }
 
-.sheet__close:hover {
-  color: #333;
-}
+.sheet__close:hover { color: #333; }
 
 .sheet__body {
-  padding: 1.25rem;
+  padding: 1rem 1.25rem 1.5rem;
   overflow-y: auto;
   flex: 1;
 }
 
+/* Badges */
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--badge-color) 12%, white);
+  border: 1px solid color-mix(in srgb, var(--badge-color) 30%, white);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--badge-color);
+  white-space: nowrap;
+}
+
+/* Allergens */
 .sheet__section-label {
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #aaa;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .sheet__empty {
   font-size: 0.875rem;
+  color: #aaa;
+}
+
+.sheet__section-label--traces {
+  margin-top: 1.25rem;
+}
+
+.sheet__traces {
+  font-size: 0.875rem;
   color: #888;
+  font-style: italic;
 }
 
 .allergen-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .allergen-item {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.875rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid #f5f5f5;
 }
 
-.allergen-item:last-child {
-  border-bottom: none;
-}
+.allergen-item:last-child { border-bottom: none; }
 
 .allergen-item__icon {
-  font-size: 1.75rem;
-  line-height: 1;
+  font-size: 1.6rem;
   width: 2rem;
   text-align: center;
 }
 
 .allergen-item__name {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #333;
 }
