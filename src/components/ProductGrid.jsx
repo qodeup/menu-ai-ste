@@ -1,41 +1,61 @@
+import { useState } from 'react'
 import { useLang } from '../context/LanguageContext'
 import { products } from '../data/menu'
+import AllergenModal from './AllergenModal'
 import './ProductGrid.css'
 
-const ALLERGEN_ICONS = {
-  gluten: { label: { it: 'Glutine', en: 'Gluten' }, icon: '🌾' },
-  dairy: { label: { it: 'Latticini', en: 'Dairy' }, icon: '🧀' },
-  eggs: { label: { it: 'Uova', en: 'Eggs' }, icon: '🥚' },
-  fish: { label: { it: 'Pesce', en: 'Fish' }, icon: '🐟' },
-  sulphites: { label: { it: 'Solfiti', en: 'Sulphites' }, icon: '🍷' },
+function formatPrice(price) {
+  if (Number.isInteger(price)) return String(price)
+  const one = parseFloat(price.toFixed(1))
+  return one === price ? price.toFixed(1) : price.toFixed(2)
+}
+
+function InfoIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+      <circle cx="8" cy="8" r="8"/>
+      <path d="M8 7v5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+      <circle cx="8" cy="4.5" r="0.85" fill="white"/>
+    </svg>
+  )
 }
 
 export default function ProductGrid({ category }) {
   const { lang } = useLang()
+  const [selected, setSelected] = useState(null)
   const items = products[category] ?? []
 
   return (
-    <div className="product-grid">
-      {items.map((item) => (
-        <article key={item.id} className="product-card">
-          <div className="product-card__body">
-            <h3 className="product-card__name">{item.name[lang]}</h3>
-            <p className="product-card__desc">{item.description[lang]}</p>
-            {item.allergens.length > 0 && (
-              <div className="product-card__allergens">
-                {item.allergens.map((a) => (
-                  <span key={a} className="allergen-tag" title={ALLERGEN_ICONS[a]?.label[lang]}>
-                    {ALLERGEN_ICONS[a]?.icon} {ALLERGEN_ICONS[a]?.label[lang]}
-                  </span>
-                ))}
+    <>
+      <div className="product-list">
+        {items.map((item, index) => (
+          <article key={item.id} className="product-row">
+            {index > 0 && <div className="product-divider" />}
+            <div className="product-row__main">
+              <div className="product-row__info">
+                <h3 className="product-row__name">{item.name[lang]}</h3>
+                <p className="product-row__desc">
+                  {item.description[lang]}
+                  {item.allergens.length > 0 && (
+                    <button
+                      className="info-btn"
+                      onClick={() => setSelected(item)}
+                      aria-label="Informazioni allergeni"
+                    >
+                      <InfoIcon />
+                    </button>
+                  )}
+                </p>
               </div>
-            )}
-          </div>
-          <div className="product-card__price">
-            € {item.price.toFixed(2)}
-          </div>
-        </article>
-      ))}
-    </div>
+              <span className="product-row__price">{formatPrice(item.price)}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {selected && (
+        <AllergenModal item={selected} onClose={() => setSelected(null)} />
+      )}
+    </>
   )
 }

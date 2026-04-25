@@ -7,8 +7,8 @@ import { categories } from './data/menu'
 import './App.css'
 
 const HERO = {
-  it: 'Il Nostro Menu',
-  en: 'Our Menu',
+  it: 'menu',
+  en: 'menu',
 }
 
 function MenuApp() {

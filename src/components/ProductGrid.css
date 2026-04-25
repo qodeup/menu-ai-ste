@@ -1,67 +1,71 @@
-.product-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-  padding: 1.25rem;
+.product-list {
+  background: white;
   max-width: 760px;
   margin: 0 auto;
   width: 100%;
+  padding: 0.5rem 0 2rem;
 }
 
-.product-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+.product-row {
+  padding: 0 1.25rem;
+}
+
+.product-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 0 1.25rem;
+}
+
+.product-row__main {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.125rem;
-  transition: box-shadow 0.15s;
+  padding: 1rem 0;
 }
 
-.product-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.product-card__body {
+.product-row__info {
   flex: 1;
 }
 
-.product-card__name {
-  font-size: 1rem;
+.product-row__name {
+  font-size: 0.95rem;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 0.3rem;
 }
 
-.product-card__desc {
-  font-size: 0.875rem;
-  color: #666;
+.product-row__desc {
+  font-size: 0.8rem;
+  color: #888;
   line-height: 1.45;
-  margin-bottom: 0.5rem;
 }
 
-.product-card__allergens {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
+.info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+  position: relative;
+  top: -0.5px;
+  transition: color 0.15s;
 }
 
-.allergen-tag {
-  font-size: 0.72rem;
-  background: #fff3f6;
+.info-btn:hover {
   color: #DC0746;
-  border: 1px solid #fcd0dc;
-  border-radius: 999px;
-  padding: 0.15rem 0.5rem;
-  white-space: nowrap;
 }
 
-.product-card__price {
-  font-size: 1.05rem;
+.product-row__price {
+  font-size: 0.95rem;
   font-weight: 700;
-  color: #DC0746;
+  color: #1a1a1a;
   white-space: nowrap;
   padding-top: 0.1rem;
+  flex-shrink: 0;
 }
