@@ -20,9 +20,9 @@
 
 .cat-btn {
   flex-shrink: 0;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1rem 0.5rem;
   border: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
   background: transparent;
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.875rem;
@@ -39,5 +39,13 @@
 
 .cat-btn--active {
   color: white;
-  border-bottom-color: white;
+  border-bottom: none;
+  padding-bottom: calc(0.5rem + 10px);
+  background-image: linear-gradient(
+    to top,
+    #DC0746 8px,
+    white 8px,
+    white 10px,
+    transparent 10px
+  );
 }
