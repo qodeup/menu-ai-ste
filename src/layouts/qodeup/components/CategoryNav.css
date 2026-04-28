@@ -1,0 +1,51 @@
+.cat-nav {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  padding: 0 0.5rem;
+  background: #DC0746;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.cat-nav:active {
+  cursor: grabbing;
+}
+
+.cat-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-btn {
+  flex-shrink: 0;
+  padding: 1rem 1rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  border-radius: 0;
+}
+
+.cat-btn:hover {
+  color: white;
+}
+
+.cat-btn--active {
+  color: white;
+  border-bottom: none;
+  padding-bottom: calc(0.5rem + 10px);
+  background-image: linear-gradient(
+    to top,
+    #DC0746 8px,
+    white 8px,
+    white 10px,
+    transparent 10px
+  );
+}

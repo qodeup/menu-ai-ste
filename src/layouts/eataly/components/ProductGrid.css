@@ -1,0 +1,138 @@
+.product-section {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-section:last-child {
+  border-bottom: none;
+}
+
+.product-section__title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  color: var(--section-title-color, var(--color-primary));
+  padding: 1rem 1.25rem 0.25rem;
+  text-align: center;
+}
+
+.product-list {
+  background: white;
+  max-width: 760px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0.5rem 0 2rem;
+}
+
+@keyframes slideOut {
+  to { opacity: 0; transform: translateX(-24px); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(24px); }
+}
+
+.product-list--out {
+  animation: slideOut 160ms ease forwards;
+}
+
+.product-list--in {
+  animation: slideIn 220ms ease forwards;
+}
+
+.product-list--idle {
+  opacity: 1;
+}
+
+.product-row {
+  padding: 0 1.25rem;
+}
+
+.product-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 0 auto;
+  width: 40%;
+}
+
+.product-row__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
+  padding: 1rem 0;
+}
+
+.product-row__name {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--title-color, #1a1a1a);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.product-row__desc {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.45;
+}
+
+.info-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 0 0 0 0.25rem;
+  vertical-align: middle;
+  line-height: 1;
+  transition: opacity 0.15s;
+}
+
+.info-btn:hover {
+  opacity: 0.7;
+}
+
+.info-btn__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.product-row__price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.product-row__dual-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.dual-price__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.dual-price__label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dual-price__value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}

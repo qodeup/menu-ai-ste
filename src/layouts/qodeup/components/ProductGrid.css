@@ -1,0 +1,139 @@
+.product-section {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-section:last-child {
+  border-bottom: none;
+}
+
+.product-section__title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #aaa;
+  padding: 1rem 1.25rem 0.25rem;
+}
+
+.product-list {
+  background: white;
+  max-width: 760px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0.5rem 0 2rem;
+}
+
+@keyframes slideOut {
+  to { opacity: 0; transform: translateX(-24px); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(24px); }
+}
+
+.product-list--out {
+  animation: slideOut 160ms ease forwards;
+}
+
+.product-list--in {
+  animation: slideIn 220ms ease forwards;
+}
+
+.product-list--idle {
+  opacity: 1;
+}
+
+.product-row {
+  padding: 0 1.25rem;
+}
+
+.product-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 0 1.25rem;
+}
+
+.product-row__main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.product-row__info {
+  flex: 1;
+}
+
+.product-row__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.product-row__desc {
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.45;
+}
+
+.product-row__name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.3rem;
+}
+
+.info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #DC0746;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+
+.info-btn:hover {
+  opacity: 0.75;
+}
+
+.product-row__price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  white-space: nowrap;
+  padding-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.product-row__dual-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.dual-price__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.dual-price__label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dual-price__value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
